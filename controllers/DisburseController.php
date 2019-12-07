@@ -8,6 +8,10 @@
 
 namespace controllers;
 
+require_once $_SERVER['DOCUMENT_ROOT'] . 'connection/DB.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . 'api/API.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . 'models/DisburseModel.php';
+
 use api\API;
 use models\DisburseModel;
 
