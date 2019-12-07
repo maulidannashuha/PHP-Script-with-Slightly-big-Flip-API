@@ -14,7 +14,7 @@ class DisburseMigration extends Migration
 {
     public $table = 'disburse';
     protected $attributes = [
-        'id' => 'BIGINT(20) UNSIGNED PRIMARY KEY',
+        'id' => 'BIGINT(10) UNSIGNED PRIMARY KEY',
         "amount" => "INT(10) UNSIGNED NOT NULL",
         "status" => "VARCHAR(10) NOT NULL",
         "timestamp" => "timestamp NULL",
