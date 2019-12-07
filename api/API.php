@@ -8,6 +8,8 @@
 
 namespace api;
 
+require_once $_SERVER['DOCUMENT_ROOT'] . 'config/api.php';
+
 class API
 {
     public static function post($url, $data){
@@ -18,7 +20,7 @@ class API
 
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-            'Authorization: basic ' . base64_encode('HyzioY7LP6ZoO7nTYKbG8O4ISkyWnX1JvAEVAhtWKZumooCzqp41:'),
+            'Authorization: basic ' . base64_encode(API_SECRET_KEY . ':'),
             'Content-Type: application/x-www-form-urlencoded',
         ));
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
@@ -37,7 +39,7 @@ class API
 
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-            'Authorization: basic ' . base64_encode('HyzioY7LP6ZoO7nTYKbG8O4ISkyWnX1JvAEVAhtWKZumooCzqp41:'),
+            'Authorization: basic ' . base64_encode(API_SECRET_KEY . ':'),
             'Content-Type: application/x-www-form-urlencoded',
         ));
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
