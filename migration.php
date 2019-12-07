@@ -6,15 +6,15 @@
  * Time: 20:05
  */
 
-require_once 'connection/Connection.php';
+require_once 'connection/DB.php';
 require_once 'migrations/DisburseMigration.php';
 
-use connection\Connection;
+use connection\DB;
 use migrations\DisburseMigration;
 
 $disburse_migration = new DisburseMigration();
 
-$conection = new Connection();
+$conection = new DB();
 $status = $conection->query($disburse_migration->getQuery());
 $conection->close();
 
