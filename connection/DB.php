@@ -8,12 +8,14 @@
 
 namespace connection;
 
+require_once $_SERVER['DOCUMENT_ROOT'] . 'config/database.php';
+
 class DB
 {
-    private $host = "localhost";
-    private $username = "root";
-    private $password = "nashuha";
-    private $database = "flip";
+    private $host = DBHOST;
+    private $username = DBUSER;
+    private $password = DBPWD;
+    private $database = DBNAME;
     private $connection;
 
     public function __construct()
