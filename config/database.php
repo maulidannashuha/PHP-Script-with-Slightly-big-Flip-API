@@ -8,5 +8,5 @@
 
 define('DBHOST','localhost');
 define('DBUSER','root');
-define('DBPWD','nashuha');
+define('DBPWD','');
 define('DBNAME','flip');
